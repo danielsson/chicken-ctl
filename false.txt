@@ -1,0 +1,18 @@
+% Model of a microwave
+
+
+[[accept, [config]],
+ [config, [accept, active]],
+ [active, [active, signal]],
+ [signal, [finished]],
+ [finished, [accept, config]]].
+
+[[accept, [o]],
+ [config, [s]],
+ [active, [r, m]],
+ [signal, [l, s]],
+ [finished, [o]]].
+
+finished.
+
+af(o). % You'll always remove your finished food from the microwave.
